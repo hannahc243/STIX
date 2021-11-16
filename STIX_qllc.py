@@ -75,8 +75,6 @@ data_concat['counts'] = data_concat['counts'] - bkg_array # subtract_stix_bkg() 
 
 data_concat['time'] = Time(header['date_obs']) + TimeDelta(data_concat['time'] * u.s)
 
-stix_counts_timeseries_nobkg(4)
-
 data_concat['counts'] = data_concat['counts'] / (live_time.reshape(-1, 1) * energy_delta) #to divide by energy and time in units of Counts $s^{-1}keV^{-1}$
 
 
